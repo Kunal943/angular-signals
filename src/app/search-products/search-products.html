@@ -1,0 +1,11 @@
+<div>Example 3 with computed signal with more real world example</div>
+<input type="text" placeholder="Search Products..." (input)="filterProducts($event)">
+<table>
+    @for (product of filteredProducts(); track $index) {
+    <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+    }
+</table>

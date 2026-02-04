@@ -1,26 +1,12 @@
-<div>Example 1 with simple dark mode toggle functionality</div>
-<div>{{label}}</div>
-<button (click)="toggleDarkMode()">Toggle Theme</button>
+<div class="navbar">
+  <h1>Angular Signals App</h1>
+  <nav>
+    <button (click)="router.navigate(['/theme'])">Theme</button>
+    <button (click)="router.navigate(['/calculate-total'])">Calculate Total</button>
+    <button (click)="router.navigate(['/search-products'])">Search Products</button>
+  </nav>
+</div>
 
-<br>
-<br>
-
-<div>Example 2 with computed signal with basic example</div>
-<div>{{totalAmount()}}</div>
-<input type="number" value={{quantity()}} (change)="changeTotalAmount($event)" />
-
-<br>
-<br>
-
-<div>Example 3 with computed signal with more real world example</div>
-<input type="text" placeholder="Search Products..." (input)="filterProducts($event)">
-<table>
-    @for (product of filteredProducts(); track $index) {
-    <tr>
-        <td>{{product.id}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.price}}</td>
-    </tr>
-    }
-</table>
-<router-outlet />
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
