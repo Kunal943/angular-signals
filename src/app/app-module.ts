@@ -19,7 +19,8 @@ import { SearchProducts } from './search-products/search-products';
     AppRoutingModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    App
   ],
   bootstrap: [App]
 })
